@@ -47,6 +47,7 @@ $packages = @(
     "scoop-completion",
     "sharex",
     "sudo",
+    "systeminformer",
     "ultravnc",
     "ungoogled-chromium",
     "vscode",
