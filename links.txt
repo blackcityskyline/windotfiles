@@ -1,12 +1,9 @@
 https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.7/npp.8.8.7.Installer.x64.exe
 https://github.com/BloopSmasher/All-in-One-Runtime-Installer/releases/download/v1.2/All-in-One-Runtime-Installer-1.2.zip
 https://builds.dotnet.microsoft.com/dotnet/Sdk/9.0.306/dotnet-sdk-9.0.306-win-x64.exe
-https://github.com/brave/brave-browser/releases/download/v1.84.135/BraveBrowserSetup.exe
-https://javadl.oracle.com/webapps/download/AutoDL?BundleId=252627_99a6cb9582554a09bd4ac60f73f9b8e6
 https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe
 https://ramensoftware.com/downloads/windhawk_setup.exe
 https://downloads.wisecleaner.com/soft/WMOSetup_4.2.4.132.exe
-https://laptop-updates.brave.com/download/BRV002?bitness=64
 https://artifacts.videolan.org/vlc/nightly-win64/20251109-0425/vlc-4.0.0-dev-win64-b1596c8d.exe
 https://nightly.link/Rectify11/Installer/workflows/build/legacy-installer/Rectify11Installer%20%28x64%29.zip
 https://github.com/Tichau/FileConverter/releases/download/v2.1/FileConverter-2.1-x64-setup.msi
