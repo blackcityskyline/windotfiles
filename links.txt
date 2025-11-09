@@ -1,5 +1,6 @@
 https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.8.7/npp.8.8.7.Installer.x64.exe
 https://github.com/BloopSmasher/All-in-One-Runtime-Installer/releases/download/v1.2/All-in-One-Runtime-Installer-1.2.zip
+https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.21/windowsdesktop-runtime-8.0.21-win-x64.exe
 https://builds.dotnet.microsoft.com/dotnet/Sdk/9.0.306/dotnet-sdk-9.0.306-win-x64.exe
 https://download.oracle.com/java/25/latest/jdk-25_windows-x64_bin.exe
 https://ramensoftware.com/downloads/windhawk_setup.exe
