@@ -14,5 +14,5 @@ https://builds.parsec.app/package/parsec-windows.exe
 https://github.com/2dust/v2rayN/releases/download/7.15.7/v2rayN-windows-64-desktop.zip
 https://3utools.org/files/downloads/3uTools_Setup_x64.exe
 https://cdn.altstore.io/file/altstore/altinstaller.zip
-https://www.apple.com/itunes/download/win64
+https://secure-appldnld.apple.com/itunes12/001-80053-20210422-E8A3B28C-A3B2-11EB-BE07-CE1B67FC6302/iTunes64Setup.exe
 https://upgrade.scdn.co/upgrade/client/win32-x86/spotify_installer-1.2.16.947.gcfbaa410-105.exe
