@@ -1,0 +1,3 @@
+	scoop install windows-terminal
+or
+	winget install --id=Microsoft.WindowsTerminal -e

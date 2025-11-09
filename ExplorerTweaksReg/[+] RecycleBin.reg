@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Добавить корзину в левую панель проводника
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{645FF040-5081-101B-9F08-00AA002F954E}"=-
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}]
+"System.IsPinnedToNameSpaceTree"=dword:00000001

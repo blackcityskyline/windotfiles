@@ -1,0 +1,3 @@
+Invoke-PS2EXE -inputfile .\YourScript.ps1 -outputfile .\YourExecutable.exe
+	
+Invoke-PS2EXE -inputfile .\YourScript.ps1 -outputfile .\YourExecutable.exe -NoConsole
