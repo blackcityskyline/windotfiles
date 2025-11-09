@@ -32,6 +32,7 @@ $packages = @(
     "glazewm",
     "gpu-z",
     "hack-nf",
+    "msiafterburner"
     "nanazip",
     "nano",
     "neofetch",
