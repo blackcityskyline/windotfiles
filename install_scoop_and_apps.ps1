@@ -20,6 +20,7 @@ $packages = @(
     "7zip",
     "autohotkey",
     "ayugram",
+    "brave",
     "cascadia-code",
     "curl",
     "cpu-z",
