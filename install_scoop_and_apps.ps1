@@ -46,7 +46,7 @@ $packages = @(
     "glazewm",
     "gpu-z",
     "hack-nf",
-    "msiafterburner"
+    "msiafterburner",
     "nanazip",
     "nano",
     "neofetch",
@@ -59,7 +59,7 @@ $packages = @(
     "ntop",
     "obs-studio",        
     "oh-my-posh",
-    "oraclejre8"
+    "oraclejre8",
     "handbrake",
     "quicklook",
     "qview",
@@ -76,10 +76,10 @@ $packages = @(
     "python39",
     "putty",
     "qbittorrent",
-    "wget"
+    "wget",
     "windhawk",
-    "windowsdesktop-runtime"
-    "windowsdesktop-runtime-lts"
+    "windowsdesktop-runtime",
+    "windowsdesktop-runtime-lts",
     "windirstat",
     "yasb",
     "youtube-music",
