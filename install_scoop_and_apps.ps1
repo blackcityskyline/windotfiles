@@ -12,10 +12,12 @@ scoop update
 scoop update *
 scoop bucket add main
 scoop bucket add extras
+scoop bucket add java
 scoop bucket add versions
 scoop bucket add nerd-fonts
 scoop bucket add nonportable
 scoop bucket add anderlli0053_DEV-tools https://github.com/anderlli0053/DEV-tools
+scoop bucket add okibcn_ScoopMaster https://github.com/okibcn/ScoopMaster
 
 # List of packages to install
 $packages = @(
@@ -23,6 +25,7 @@ $packages = @(
     "7zip",
     "autohotkey",
     "asio4all-np"
+    "aria2",
     "atom-ng",
     "ayugram",
     "brave",
@@ -54,6 +57,7 @@ $packages = @(
     "ntop",
     "obs-studio",        
     "oh-my-posh",
+    "oraclejre8"
     "handbrake",
     "quicklook",
     "qview",
@@ -63,12 +67,16 @@ $packages = @(
     "systeminformer",
     "ultravnc",
     "ungoogled-chromium",
+    "vcredist2022",
+    "vcredist",
     "vscode",
     "parsec-np",
     "python39",
     "putty",
     "qbittorrent",
+    "wget"
     "windhawk",
+    "windowsdesktop-runtime"
     "windirstat",
     "yasb",
     "youtube-music",
