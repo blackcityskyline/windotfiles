@@ -30,7 +30,7 @@ $packages = @(
     "ayugram",
     "brave",
     "cascadia-code",
-    "cava"
+    "cava",
     "curl",
     "cpu-z",
     "delugia-mono-nerd-font-complete",
