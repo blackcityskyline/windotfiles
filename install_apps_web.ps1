@@ -1,10 +1,10 @@
-# Функция для цветового вывода
+# Color output
 function Write-Color($Text, $Color="White") {
     Write-Host $Text -ForegroundColor $Color
 }
 
-# 1. Приветствие и запуск
-Write-Color "Hi! Run the script?" 'Cyan'
+# 1. Start and run
+Write-Color "Hi! Would you run the script?" 'Cyan'
 $startResponse = Read-Host "Proceed? (Y/N)"
 if ($startResponse.ToLower() -ne 'y') {
     Write-Color "Press any key to exit..." 'Yellow'
@@ -12,7 +12,7 @@ if ($startResponse.ToLower() -ne 'y') {
     exit
 }
 
-# 2. Ввод папки для загрузки
+# 2. Enter download folder
 $downloadPath = Read-Host "Enter download path (e.g., C:\Downloads)"
 if (!(Test-Path $downloadPath)) {
     New-Item -ItemType Directory -Path $downloadPath | Out-Null
@@ -21,8 +21,8 @@ if (!(Test-Path $downloadPath)) {
     Write-Color "Folder already exists: $downloadPath" 'Green'
 }
 
-# 3. Ввод источника ссылок
-$linkSource = Read-Host "Enter source links.txt URL или путь к файлу"
+# 3. Enter download source
+$linkSource = Read-Host "Enter source links.txt URL or path"
 $tempLinksFile = "$env:TEMP\links.txt"
 
 if ($linkSource -match '^(http|https)://') {
@@ -41,19 +41,19 @@ if ($linkSource -match '^(http|https)://') {
     exit
 }
 
-# 4. Путь к 7-Zip
+# 4. Path to 7-Zip
 $zipPath = Read-Host "Enter path to 7z.exe (e.g., C:\Program Files\7-Zip\7z.exe)"
 if (!(Test-Path $zipPath)) {
     Write-Color "7-Zip executable not found." 'Red'
     exit
 }
 
-# 5. Обработка ссылок
+# 5. Links processing
 $links = Get-Content $tempLinksFile | Where-Object { $_ -match '^https?://' }
 $totalLinks = $links.Count
 $logFile = "$downloadPath\download_log.txt"
 
-# Очистка лог-файла
+# Clear log
 "" | Out-File $logFile
 
 $processedCount = 0
@@ -67,11 +67,11 @@ foreach ($link in $links) {
 
     $destinationFile = Join-Path $downloadPath $fileName
 
-    # Прогресс
+    # Progress
     $percent = [math]::Round(($processedCount / $totalLinks) * 100, 2)
     Write-Color "Processing $processedCount of $totalLinks ($percent%) : $link" 'Cyan'
 
-    # Загрузка файла
+    # Download the file
     try {
         Invoke-WebRequest -Uri $link -OutFile "$destinationFile.tmp" -UseBasicParsing -ErrorAction Stop
         Move-Item "$destinationFile.tmp" $destinationFile -Force
@@ -83,34 +83,34 @@ foreach ($link in $links) {
         continue
     }
 
-    # Распаковка архива
+    # Extract
     $ext = [IO.Path]::GetExtension($fileName).ToLower()
     if ($ext -in @('.zip','.7z','.rar')) {
         Write-Color "Extracting: $fileName" 'Yellow'
         $archiveBaseName = [IO.Path]::GetFileNameWithoutExtension($fileName)
 
-        # Создаем безопасное имя папки
+        # Safe folder name creating
         $safeFolderName = ($archiveBaseName -replace '[\\/:*?"<>|]', '_')
         $extractFolderPath = Join-Path $downloadPath $safeFolderName
 
-        # Создать или очистить папку
+        # Create or clear folder
         if (Test-Path $extractFolderPath) {
             Remove-Item "$extractFolderPath\*" -Recurse -Force -ErrorAction SilentlyContinue
         } else {
             New-Item -ItemType Directory -Path $extractFolderPath | Out-Null
         }
 
-        # Распаковка
+        # Extracting
     try {
-        # Создаем массив аргументов без кавычек, указывая пути как есть
+        # arguments without ""
         $args = @(
-            "x"          # распаковка
-            "-y"         # автоматическое подтверждение
-            "$destinationFile"             # архив файл
-            "-o$extractFolderPath"          # папка для распаковки
+            "x"          # extracting
+            "-y"         # auto approve
+            "$destinationFile"             # destination file
+            "-o$extractFolderPath"          # destinantion folder
         )
 
-        # Выполняем команду
+        # Run
         $result = & "$zipPath" @args 2>&1
 
         if ($LASTEXITCODE -eq 0) {
@@ -125,16 +125,16 @@ foreach ($link in $links) {
     }
     }
 
-    # Размер файла
+    # File size
     if (Test-Path $destinationFile) {
         $fileSizeMB = [math]::Round((Get-Item $destinationFile).Length / 1MB, 2)
         Write-Color "File size: $fileSizeMB MB" 'Magenta'
     }
 
-    Write-Host "" # Пустая строка для читаемости
+    Write-Host "" # empty string 
 }
 
-# Итог
+# Result
 Write-Color "Process completed." 'Cyan'
 Write-Color "Total links: $totalLinks" 'Yellow'
 try {
