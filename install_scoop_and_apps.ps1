@@ -35,6 +35,8 @@ $packages = @(
     "cpu-z",
     "delugia-mono-nerd-font-complete",
     "delugia-nerd-font-complete",
+    "dotnet-framework-3.5-sp1",
+    "dotnet-3.1-desktopruntime",
     "discord",
     "fastfetch",
     "flow-launcher",
@@ -77,6 +79,7 @@ $packages = @(
     "wget"
     "windhawk",
     "windowsdesktop-runtime"
+    "windowsdesktop-runtime-lts"
     "windirstat",
     "yasb",
     "youtube-music",
