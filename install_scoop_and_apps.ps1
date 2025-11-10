@@ -14,22 +14,30 @@ scoop bucket add main
 scoop bucket add extras
 scoop bucket add versions
 scoop bucket add nerd-fonts
+scoop bucket add nonportable
+scoop bucket add anderlli0053_DEV-tools https://github.com/anderlli0053/DEV-tools
 
 # List of packages to install
 $packages = @(
+    "3utools",
     "7zip",
     "autohotkey",
+    "asio4all-np"
+    "atom-ng",
     "ayugram",
     "brave",
     "cascadia-code",
+    "cava"
     "curl",
     "cpu-z",
     "delugia-mono-nerd-font-complete",
     "delugia-nerd-font-complete",
+    "discord",
     "fastfetch",
     "flow-launcher",
     "fzf",
     "git",
+    "github",
     "glazewm",
     "gpu-z",
     "hack-nf",
@@ -40,10 +48,13 @@ $packages = @(
     "neovim",
     "nilesoft-shell",
     "nodejs",
+    "nonportable/file-converter-np",
     "notepadplusplus",
+    "notion",
     "ntop",
     "obs-studio",        
     "oh-my-posh",
+    "handbrake",
     "quicklook",
     "qview",
     "scoop-completion",
@@ -53,8 +64,11 @@ $packages = @(
     "ultravnc",
     "ungoogled-chromium",
     "vscode",
+    "parsec-np",
     "python39",
     "putty",
+    "qbittorrent",
+    "windhawk",
     "windirstat",
     "yasb",
     "youtube-music",
@@ -67,4 +81,4 @@ foreach ($package in $packages) {
     scoop install $package
 }
 
-Write-Output "All packages have been installed."влены."
+Write-Output "All packages have been installed."
