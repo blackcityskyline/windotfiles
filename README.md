@@ -1,2 +1,2 @@
-# windofiles
-dotfiles and soft
+# windows dofiles
+
